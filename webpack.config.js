@@ -28,18 +28,6 @@ function generateHtmlPlugins(templateDir) {
   }).filter((item) => item !== null)
 }
 
-function generateCopyPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map(item => {
-    const parts = item.split('.');
-    const name = parts[0];
-    const extension = parts[1];
-    if (extension !== 'html') return null;
-
-    return { from: `${templateDir}/${name}.${extension}`, to: `./${name}.${extension}` }
-  }).filter((item) => item !== null)
-}
-
 module.exports = {
   entry: './src/index.js',
   resolve: {
@@ -77,7 +65,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
@@ -89,12 +77,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "css/style.css", }),
     ...generateHtmlPlugins('./src'),
+    new MiniCssExtractPlugin({ filename: "css/style.css", }),
     new CopyPlugin({
       patterns: [
-        { from: "./src/img/", to: "./img/" },
-        ...generateCopyPlugins('./src/html-dialogs')
+        { from: "./src/assets/img/", to: "./img/" },
       ],
     }),
   ],
