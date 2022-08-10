@@ -29,12 +29,13 @@ function generateHtmlPlugins(templateDir) {
 }
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   resolve: {
     alias: {
       '@src': path.resolve(__dirname, 'src/')
 
-    }
+    },
+    extensions: [".tsx", ".ts", ".js"],
   },
   output: {
     path: PUBLIC_PATH,
@@ -66,6 +67,16 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
           }
         }
       },
