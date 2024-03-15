@@ -1,0 +1,35 @@
+:root {
+  --section-width     : calc(100vw - 30px);
+  --section-gap-top   : 20px;
+  --section-gap-bottom: 20px;
+}
+
+dialog,
+section,
+header,
+footer {
+  padding: 0 calc(50% - var(--section-width) / 2);
+}
+
+section {
+  padding-top   : var(--section-gap-top);
+  padding-bottom: var(--section-gap-bottom);
+}
+
+@screen md {
+  :root {
+    --section-width: calc(theme(container.md));
+  }
+}
+
+@screen lg {
+  :root {
+    --section-width: calc(theme(container.lg));
+  }
+}
+
+@screen xl {
+  :root {
+    --section-width: calc(theme(container.xl));
+  }
+}

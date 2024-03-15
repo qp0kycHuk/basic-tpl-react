@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/dist/backdrop.css';
+@import 'tippy.js/animations/shift-away.css';
+@import 'tippy.js/themes/material.css';
+@import 'react-toastify/dist/ReactToastify.css';
+@import '@qpokychuk/fonts/inter/index.css';
+@import '@qpokychuk/fonts/gilroy/index.css';
+
+@import '@/assets/scss/functions';
+@import '@/assets/scss/style.scss';
+
+:root {
+  // theme colors
+  --primary-rgb : #{cl(#5f27cd)};
+  --sec-rgb     : #{cl(#ff9f43)};
+  --red-rgb     : #{cl(#c0392b)};
+  --green-rgb   : #{cl(#27ae60)};
+  --blue-rgb    : #{cl(#2980b9)};
+  --yellow-rgb  : #{cl(#f39c12)};
+
+  // colors
+  --bg1-rgb     : #{cl(#ededed)};
+  --bg2-rgb     : #{cl(#F3F0EB)};
+  --bg3-rgb     : #{cl(#fff)};
+  --default-rgb : #{cl(#373737)};
+  --white-rgb   : #{cl(#fff)};
+  --black-rgb   : #{cl(#000)};
+
+  // font
+  --font-base: "Inter", arial, helvetica, sans-serif;
+  --font-alt : "Gilroy", arial, helvetica, sans-serif;
+
+}
+
+.dark {
+  --bg1-rgb     : #{cl(#181818)};
+  --bg2-rgb     : #{cl(#282828)};
+  --bg3-rgb     : #{cl(#323232)};
+  --default-rgb : #{cl(#fff)};
+
+}

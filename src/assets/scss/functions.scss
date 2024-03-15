@@ -1,0 +1,5 @@
+@function cl($hex) {
+  @return red($hex),
+  green($hex),
+  blue($hex);
+}

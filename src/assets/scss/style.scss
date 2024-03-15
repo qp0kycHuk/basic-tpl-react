@@ -1,0 +1,23 @@
+@import 'container.scss';
+
+
+body {
+  display       : flex;
+  flex-direction: column;
+  min-height    : 100vh;
+  background    : theme('colors.l2');
+  font-family   : theme('fontFamily.base');
+  color         : theme('colors.default');
+
+  &.menu-opened {
+    overflow: hidden;
+  }
+}
+
+
+
+.root {
+  display       : flex;
+  flex-direction: column;
+  flex-grow     : 1;
+}

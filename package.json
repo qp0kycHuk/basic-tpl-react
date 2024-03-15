@@ -1,0 +1,47 @@
+{
+  "name": "basic-tpl-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@qpokychuk/fonts": "^1.0.10",
+    "@tippyjs/react": "^4.2.6",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-toastify": "^10.0.5",
+    "tailwind-merge": "^2.2.1"
+  },
+  "devDependencies": {
+    "@qpokychuk/tailwind-button-plugin": "^2.1.1",
+    "@qpokychuk/tailwind-checkbox-plugin": "^1.0.0",
+    "@qpokychuk/tailwind-input-plugin": "^1.0.0",
+    "@qpokychuk/tailwind-ratio-plugin": "^2.0.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20.11.27",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.35",
+    "prettier": "^2.8.8",
+    "prettier-eslint": "^16.3.0",
+    "sass": "^1.71.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6",
+    "vite-plugin-svgr": "^4.2.0"
+  }
+}
