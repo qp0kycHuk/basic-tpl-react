@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    ".vscode": true,
+    ".github": true,
+    ".gitignore": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    ".stylelintrc": true,
+    "tsconfig.node.json": true,
+    ".eslintrc.cjs": true,
+    "postcss.config.js": true,
+    "tsconfig.json": true,
+    "vite.config.ts": true,
+    "package.json": true,
+    "server-deploy.sh": true
+  },
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 2,
+}
