@@ -23,5 +23,6 @@ module.exports = {
       }
     ],
     "no-extra-semi": "off",
+    "@typescript-eslint/no-explicit-any": ['warn']
   },
 }
