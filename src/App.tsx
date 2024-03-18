@@ -1,5 +1,7 @@
 import {
   Dialog,
+  Fancybox,
+  FancyboxItem,
   Menu,
   MenuButton,
   MenuItem,
@@ -9,6 +11,17 @@ import {
 } from "@libs"
 import { PirateIcon } from "@icons/fill"
 import { useToggle } from "@hooks"
+
+const images = [
+  "img/test-1.jpg",
+  "img/test-2.jpg",
+  "img/test-3.jpg",
+  "img/test-4.jpg",
+  "img/test-5.jpg",
+  "img/test-6.jpg",
+  "img/test-7.jpg",
+  "img/test-8.jpg",
+]
 
 function App() {
   const message = "Yohohohohohohohoho!"
@@ -47,11 +60,13 @@ function App() {
               </button>
             </MenuItem>
             <MenuItem>
-              <Tooltip content={message} placement="right">
-                <button className="btn btn-primary w-full rounded-lg justify-start btn-sm">
-                  Tooltip
-                </button>
-              </Tooltip>
+              <div>
+                <Tooltip content={message} placement="bottom">
+                  <button className="btn btn-primary w-full rounded-lg justify-start btn-sm">
+                    Tooltip
+                  </button>
+                </Tooltip>
+              </div>
             </MenuItem>
           </MenuItems>
         </Menu>
@@ -60,6 +75,21 @@ function App() {
       <Dialog isOpen={isOpen} onClose={closeDialog} className="max-w-2xl p-10">
         <PirateIcon className="text-6xl mx-auto text-red" />
         <div className="text-2xl mt-6 text-center">{message}</div>
+        <Fancybox className="grid grid-cols-4 gap-5 mt-10">
+          {images.map((src, index) => (
+            <FancyboxItem
+              className="ratio ratio-1/1 relative"
+              key={index}
+              href={src}
+              group
+            >
+              <img
+                className="absolute size-full inset-0 object-cover"
+                src={src}
+              />
+            </FancyboxItem>
+          ))}
+        </Fancybox>
       </Dialog>
     </section>
   )

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.35",
     "@headlessui/react": "^1.7.18",
     "@qpokychuk/fonts": "^1.0.10",
     "@tippyjs/react": "^4.2.6",
