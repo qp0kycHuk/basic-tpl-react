@@ -1,5 +1,5 @@
 import { twJoin } from "tailwind-merge"
-import { useThemeContext } from "@/layout/ThemeContext"
+import { useThemeContext } from "@shared/ui/ThemeContext"
 import classes from "./ThemeToggle.module.scss"
 
 interface IProps {

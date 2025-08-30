@@ -1,7 +1,7 @@
 import { Transition, Dialog as DialogWrap } from "@headlessui/react"
 import { twMerge } from "tailwind-merge"
 import { Fragment } from "react"
-import { CrossIcon } from "@/assets/icons/contur"
+import { CrossIcon } from "@icons/contur"
 
 export interface IDialogProps extends React.PropsWithChildren {
   isOpen: boolean

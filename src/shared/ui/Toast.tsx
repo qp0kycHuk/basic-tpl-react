@@ -1,4 +1,4 @@
-import { CrossIcon } from "@/assets/icons/contur"
+import { CrossIcon } from "@icons/contur"
 import React from "react"
 import { twMerge } from "tailwind-merge"
 import {

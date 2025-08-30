@@ -1,6 +1,6 @@
+import { ThemeContextProvider } from "@shared/ui/ThemeContext"
+import { ToastContainer } from "@shared/ui"
 import { createPortal } from "react-dom"
-import { ThemeContextProvider } from "./layout/ThemeContext"
-import { ToastContainer } from "./libs/Toast"
 
 export function Provider({ children }: React.PropsWithChildren) {
   return (
